@@ -1,0 +1,135 @@
+\documentclass{article}
+\usepackage{booktabs} % For enhanced table formatting
+\usepackage{tabularx} % For tables with adjustable-width columns
+\usepackage{geometry} % For adjusting page dimensions
+\geometry{a4paper, margin=1in} % Adjust margins as needed
+
+\begin{document}
+
+% Existing table
+\begin{table}[ht]
+\centering
+\caption{Column Descriptions}
+\label{tab:column_descriptions}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Column Name} & \textbf{Explanation} \\
+\hline
+I & Placeholder or identifier, likely used for indexing or reference purposes. \\
+\hline
+BID & The identifier for the bid; represents a unique bid record in the dataset. \\
+\hline
+BIDDAYOFFER\_D & Shows the public summary of energy and Frequency Control Ancillary Service (FCAS) offers for dispatch intervals. \\
+\hline
+2 & Placeholder or unnamed column; may represent data related to BIDDAYOFFER\_D structure or versioning. \\
+\hline
+SETTLEMENTDATE & Market date for which the bid applied. \\
+\hline
+DUID & Dispatchable Unit Identifier; a unique code identifying the generating unit or load. \\
+\hline
+BIDTYPE & Type of bid, such as ENERGY or different ancillary services (e.g., RAISE60SEC, LOWER5MIN). \\
+\hline
+BIDSETTLEMENTDATE & Market date for which the bid was submitted. \\
+\hline
+OFFERDATE & Date and time when the offer was submitted. \\
+\hline
+VERSIONNO & Version number of the bid or offer. \\
+\hline
+PARTICIPANTID & Unique identifier for the participant submitting the bid. \\
+\hline
+DAILYENERGYCONSTRAINT & Maximum energy available from Energy-Constrained Plant (applicable for energy bids only). \\
+\hline
+REBIDEXPLANATION & Explanation for rebids or reasons for inflexibilities in the original bid. \\
+\hline
+PRICEBAND1 & Price associated with Availability Band 1. \\
+\hline
+PRICEBAND2 & Price associated with Availability Band 2. \\
+\hline
+PRICEBAND3 & Price associated with Availability Band 3. \\
+\hline
+PRICEBAND4 & Price associated with Availability Band 4. \\
+\hline
+PRICEBAND5 & Price associated with Availability Band 5. \\
+\hline
+PRICEBAND6 & Price associated with Availability Band 6. \\
+\hline
+PRICEBAND7 & Price associated with Availability Band 7. \\
+\hline
+PRICEBAND8 & Price associated with Availability Band 8. \\
+\hline
+PRICEBAND9 & Price associated with Availability Band 9. \\
+\hline
+PRICEBAND10 & Price associated with Availability Band 10. \\
+\hline
+MINIMUMLOAD & Minimum load (in MW) required for a fast-start plant to begin operation. \\
+\hline
+T1 & Time to synchronize, in minutes (applicable for energy bids only). \\
+\hline
+T2 & Time to reach minimum load, in minutes (applicable for energy bids only). \\
+\hline
+T3 & Time at minimum load, in minutes (applicable for energy bids only). \\
+\hline
+T4 & Time to shut down, in minutes (applicable for energy bids only). \\
+\hline
+NORMALSTATUS & Indicates the ON/OFF status for loads (applicable for energy bids only). \\
+\hline
+LASTCHANGED & Date and time when the record was last modified. \\
+\hline
+MR\_FACTOR & Mandatory Restriction Scaling Factor; used for scaling the impact of restrictions. \\
+\hline
+ENTRYTYPE & Indicates if the bid is "Daily" (if processed before bid cutoff of previous day) or a "REBID." (this is a bid that modifies the initial daily bid) \\
+\hline
+\end{tabularx}
+\end{table}
+
+% Additional table for Bid Types
+\begin{table}[ht]
+\centering
+\caption{Bid Types and Their Explanations}
+\label{tab:bid_types}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Bid Type} & \textbf{Explanation} \\
+\hline
+ENERGY & Offers to supply electrical energy to the market. \\
+\hline
+RAISE60SEC & Offers for Frequency Control Ancillary Services (FCAS) to raise frequency within 60 seconds. \\
+\hline
+RAISE6SEC & Offers for FCAS to raise frequency within 6 seconds. \\
+\hline
+RAISEREG & Offers for regulating FCAS to raise frequency continuously as needed. \\
+\hline
+LOWERREG & Offers for regulating FCAS to lower frequency continuously as needed. \\
+\hline
+RAISE5MIN & Offers for FCAS to raise frequency within 5 minutes. \\
+\hline
+LOWER6SEC & Offers for FCAS to lower frequency within 6 seconds. \\
+\hline
+LOWER5MIN & Offers for FCAS to lower frequency within 5 minutes. \\
+\hline
+LOWER60SEC & Offers for FCAS to lower frequency within 60 seconds. \\
+\hline
+\end{tabularx}
+\end{table}
+
+% Additional table for Entry Types
+\begin{table}[ht]
+\centering
+\caption{Entry Types and Their Explanations}
+\label{tab:entry_types}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Entry Type} & \textbf{Explanation} \\
+\hline
+DAILY & Initial daily bid submitted before the cutoff time of the previous day. \\
+\hline
+REBID & A bid that modifies the initial daily bid, submitted after the cutoff time. \\
+\hline
+NaN & Represents missing or undefined bid type. \\
+\hline
+DEFAULT & Standard bid type used when no specific type is assigned. \\
+\hline
+\end{tabularx}
+\end{table}
+
+\end{document}

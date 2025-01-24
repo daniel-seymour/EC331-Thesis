@@ -1,0 +1,22 @@
+\documentclass{article} % Specifies the document class
+
+\title{Data Description} % Sets the title
+
+\date{\today}              % Sets the date; \today inserts the current date
+
+\begin{document}           % Begins the document content
+
+Following Hortaçsu and Puller (2008), I restricted attention to a single daily auction. ERCOT was a 15 minute auction, and NEMO (Australia electricity market) has 5 minute auctions. For the 3 year period, I restricted analysis to the 6:00-6:05pm auction, which, as it's in the early evening, is one of the most active bidding times.
+
+There is significant volatility in electricity prices on the 5min auction basis. I initially thought it was an error, but this is supported by an article on regulator's website: https://www.aer.gov.au/news/articles/communications/aer-reports-q2-2024-high-electricity-price-events
+
+Note that the number of unique firms is less than the number of bids (around half)
+
+For reduced regressions, I have run a regression on average price in all regions on the price of the bids of Loy Yang Power Station at the end of this notebook. Currently, something is wrong as this hasn't produced a stat. sig coefficient. 
+
+
+Complicating factors include how there are ten price-volume pairs for complete bid, and I'm not regressing the bid price on the lagged trading price. There are also nuances around market opening/closing I haven't grasped yet.
+
+\end{document}             % Ends the document
+Sample Period: 2021-11-01 to 2024-10-30 (1,095 days)
+

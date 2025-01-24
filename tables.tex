@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for \resizebox
+\usepackage{booktabs} % For enhanced table formatting
+\begin{document}
+
+\begin{table}[ht]
+\centering
+\caption{Summary Statistics of Regional Reference Prices}
+\label{tab:summary_stats}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrrr}
+\toprule
+ & Count & Mean & Standard Deviation & Minimum & 25th Percentile & Median & 75th Percentile & Maximum \\
+REGIONID &  &  &  &  &  &  &  &  \\
+\midrule
+\textbf{NSW1} & 1,581,723 & 70.13 & 254.36 & -1,000.00 & 32.10 & 50.01 & 73.32 & 16,599.89 \\
+\textbf{QLD1} & 1,581,723 & 71.55 & 350.26 & -1,000.00 & 28.61 & 48.95 & 68.73 & 15,500.00 \\
+\textbf{SA1} & 1,581,723 & 69.86 & 371.06 & -1,000.00 & 27.40 & 46.62 & 78.69 & 16,600.00 \\
+\textbf{TAS1} & 1,581,723 & 62.10 & 184.06 & -1,000.00 & 27.85 & 42.49 & 77.02 & 15,500.00 \\
+\textbf{VIC1} & 1,581,723 & 61.27 & 239.31 & -1,000.00 & 25.20 & 43.68 & 71.36 & 15,100.00 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\end{document}
